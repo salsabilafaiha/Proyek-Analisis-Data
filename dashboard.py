@@ -16,8 +16,8 @@ def create_comparison_casual_reg_df(df):
     df_day['dteday'] = pd.to_datetime(df_day['dteday'])
     return df_day['dteday']
     
-df_day = pd.read_csv("Bike-sharing-dataset/day.csv")
-df_hour = pd.read_csv("Bike-sharing-dataset/hour.csv")
+df_day = pd.read_csv("dashboard/day.csv")
+df_hour = pd.read_csv("dashboard/hour.csv")
 
 hourly_usage = create_busy_hour_df(df_hour)
 df_day['dteday'] = create_comparison_casual_reg_df(df_day)
